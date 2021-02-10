@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Knowledge</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+      <div class="jumbotron text-center">
+        <h1>Visit the...</h1>
+        <p>Flat desolate plains of the Red Planet</p>
+        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+      </div>
+      
+      <h2>Latest Mars News:</h2>
+      <h2>{{ mars_data.title }}</h2>
+      <h3>{{ mars_data.text }}</h3>
+    <div class="row">
+    <div class="col-md-8">
+      <h2>Featured Mars Image:</h2>
+      <img src="{{ mars_data.featured_image_url }}" alt="Mars">
+      <!--<h3> {{ mars_data.featured_image_url }}</h3>-->
+    </div>  
+    <div class="col-md-4">
+      <h2>Mars Facts!</h2>
+      <div class="table-responsive-sm">
+        {{ mars_data.table|safe}}
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+      <div class="jumbotron text-center">
+        <h2>Mars Hemispheres</h2>
+      </div>
+    <div class="row">
+    <div class="col-md-5">
+      <img src="{{ mars_data.cerb }}" alt="Cerberus Hemisphere">
+      <h3>Cerberus Hemisphere Enhanced</h3>
+    </div>
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-5">
+      <img src="{{ mars_data.schiap }}" alt="Schiaparelli Hemisphere Hemisphere">
+      <h3>Schiaparelli Hemisphere Enhanced</h3>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-5">
+      <img src="{{ mars_data.syrt }}" alt="Syrtis Major Hemisphere">
+      <h3>Syrtis Major Hemisphere Enhanced</h3>
+    </div>
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-5">
+      <img src="{{ mars_data.valles }}" alt="Valles Marineris Hemisphere">
+      <h3>Valles Marineris Hemisphere Enhanced</h3>
+    </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
